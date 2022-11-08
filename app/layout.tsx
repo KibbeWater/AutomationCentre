@@ -1,3 +1,4 @@
+import Navbar from '../components/Navbar';
 import '../styles/globals.css';
 
 export default function layout({ children }: { children: React.ReactNode }) {
@@ -6,7 +7,10 @@ export default function layout({ children }: { children: React.ReactNode }) {
 			<head>
 				<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 			</head>
-			<body>{children}</body>
+			<body>
+				<Navbar />
+				{children}
+			</body>
 		</html>
 	);
 }

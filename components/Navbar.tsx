@@ -21,7 +21,10 @@ function NavItem({ item, active }: { item: NavLink; active?: boolean }) {
 			<Link className='text-sm relative' href={item.href} key={'nav-' + item.label.toLowerCase()}>
 				{item.label}
 				{active ? (
-					<motion.div className='absolute w-10 bottom-[-1px] left-0 right-0 h-px bg-red-900' layoutId={'nav-underline'} />
+					<motion.div
+						className='absolute w-1 h-1 -bottom-2 mx-auto left-0 right-0 bg-black rounded-full'
+						layoutId={'nav-underline'}
+					/>
 				) : (
 					<> </>
 				)}
